@@ -1,19 +1,12 @@
-//Add numbers from 1 to 100 and write the sum on the console
+/* Task: Compute the average of marks
+Sample output
+$ node a01-A.js 4.5 5.5 3.5 4.1
+The average of these marks 4.5,5.5,3.5,4.1 is 4.4!
+ */
+//Read arguments on the CLI
 //??
 //??
 //??
-//??
-//??
-
-
-//Subtract 1 from 129 until you reach 0 with a for-loop
-//Write each subtraction on the console.
-//??
-//??
-//??
-
-//Subtract 1 from 129 until you reach 0 with a while-loop
-//Write each subtraction on the console.
 //??
 //??
 //??
