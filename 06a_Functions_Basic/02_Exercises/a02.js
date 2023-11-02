@@ -1,12 +1,3 @@
-
-/*
-Aufgabe 2
-a) Erstellen Sie eine Funktion als 'function declaration',
-welche zwei Zahlen subtrahiert.
-
-b) Testen Sie Ihre Funktion mind. zwei Mal mit verschiedenen Fahrenheit-Werten.
- */
-
 /*
 Tasks:
 a) Create a 'function declaration' which adds to numbers and output its sum.

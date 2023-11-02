@@ -43,49 +43,58 @@ let title = '=========================================\n' +
     `Mark tool\n` +
     '=========================================\n';
 
-function linearGradeScala(points, maxPoints){
-    let mark = (points/maxPoints)*5+1;
-    let msg;
-    if (mark >= 4.0) {
-        msg = 'a sufficient';
-    } else {
-        msg = 'an insufficient';
-    }
-    return `You achieved ${points} of ${maxPoints} points and ${msg}`+
-        `mark ${mark.toFixed(2)}!`;
-}
+//??
+//??
+//??
+    //determine text if sufficient or insuffcient mark
+//??
+//??
+//??
+//??
+//??
+
+//??
+//??
+//??
+
 console.log(title);
 
 function menu() {
     //Calculate or Exit
-    let ans = askQuestion("(C)alculate or (E)xit? ");
-    ans.then(data => {
-        let msg = 'Unknown operation!';
-        let value = data.toUpperCase();
-        switch(value){
-            case 'C':
-                ans = askQuestion("What are maximum Points? ");
-                ans.then(data => {
-                    let maxPoints = parseFloat(data);
-                    ans = askQuestion("What are the achieved Points? ");
-                    ans.then(data => {
-                        let points = parseFloat(data);
-                        console.log(linearGradeScala(points,maxPoints));
-                        menu();
-                    })
-                })
-                break;
-            case 'E':
-                msg='Exit manager ...';
-                console.log(msg);
-                return 0;
-            default:
-                value = 'n/a';//??
-                console.log(msg);//??
-                return 2;//??
-        }
-
-    })
+//??
+//??
+//??
+//??
+        //switch
+//??
+            //case C
+//??
+                //ask for max. points
+//??
+//??
+//??
+                    //ask for achieved points by the student
+//??
+//??
+//??
+//??
+                        //call menu again
+//??
+//??
+//??
+//??
+            //case E
+//??
+//??
+//??
+//??
+            //case default
+//??
+//??
+//??
+//??
+//??
+//??
 }
 
 //call menu
