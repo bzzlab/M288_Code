@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+    <title>Funktionen</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/basic.css" type="text/css">
+</head>
+<body>
+<main>
+    <section>
+        <aside>
+            <h3>Einfache Meldung auf Knopfdruck ausgeben</h3>
+            <ul>
+                <li>siehe alert-Meldung</li>
+                <li>Webconsole</li>
+                <li>Webseite</li>
+            </ul>
+        </aside>
+        <aside>
+            <p>
+                <!-- Eingabefeld -->
+                <label for="eingabe">Klasse:&nbsp;</label>
+                <input type="text" id="eingabe" size="20"
+                       placeholder="Kurzbezeichnung" required>
+
+                <!-- Button -->
+                <!-- Variante MIT Parameter -->
+                <!--<input type="submit" id="btnMeldung"
+                       value="Meldung ausgeben!"
+                       onclick="hallo(document.getElementById('eingabe').value)">-->
+
+                <!-- Variante ohne Parameter -->
+                <!-- Variante MIT Parameter UND Rückgabe (return) -->
+                <input type="submit" id="btnMeldung"
+                   value="Meldung ausgeben!"
+                   onclick="hallo();">
+            </p>
+        </aside>
+        <aside>
+            <p id="out"></p>
+        </aside>
+    </section>
+</main>
+
+<!-- Variante ohne Parameter -->
+<!--<script>
+    /* gibt eine Meldung auf dem Bildschrim aus */
+    function hallo() {
+        let msg = "Hallo lieber Mediamatiker";
+        alert(msg);
+        document.getElementById("out").innerText = msg;
+    }
+</script>-->
+
+<!-- Variante MIT Parameter -->
+<!--<script>
+    /* gibt eine Meldung auf dem Bildschrim aus */
+    function hallo(klasse) {
+        let msg = "Hallo lieber Mediamatiker der Klasse "+klasse;
+        alert(msg);
+        console.log("Log: " + msg);
+        document.getElementById("out").innerText = msg;
+    }
+</script>-->
+
+<!-- Variante MIT Parameter UND Rückgabe (return) -->
+<script>
+    /* hallo-Meldung mit Parameter und Rückgabewert */
+    function halloText(klasse) {
+        let msg = "Hallo lieber Mediamatiker der Klasse "+klasse;
+        document.getElementById("out").innerText = msg;
+        return msg;
+    }
+    /* gibt eine Meldung auf dem Bildschrim aus durch Aufruf der hallo-Funktion */
+    function hallo() {
+        let eingabe = document.getElementById('eingabe').value;
+        let msg = halloText(eingabe);
+        console.log("Log: " + msg);
+    }
+</script>
+
+</body>
+</html>
