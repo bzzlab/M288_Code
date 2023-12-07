@@ -25,6 +25,7 @@ class Auftritt {
     }
 }
 
-module.exports = {
-    Auftritt
-}
+//variant 1 - named export
+export { Auftritt }
+//variant 2 - default export
+//export default Auftritt;

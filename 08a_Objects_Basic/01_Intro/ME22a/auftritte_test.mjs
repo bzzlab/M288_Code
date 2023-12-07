@@ -1,19 +1,18 @@
-let Lib = require('./auftritte_class');
+//variant 1 - named import
+import { Auftritt } from './auftritte_class.mjs';
+//variant 2 - default import
+//import Auftritt from './auftritte_class.mjs';
+
 
 let auftrittsListe = [];
-auftrittsListe.push(new Lib
-    .Auftritt(new Date('2024-01-14'),"Exil, Zurich", "Rain on Mars"));
-auftrittsListe.push(new Lib
-    .Auftritt(new Date('2024-01-21T21:00'),"Rote Fabrik, Zurich",
+auftrittsListe.push(new Auftritt(new Date('2024-01-14'),"Exil, Zurich", "Rain on Mars"));
+auftrittsListe.push(new Auftritt(new Date('2024-01-21T21:00'),"Rote Fabrik, Zurich",
         "Rain on Mars"));
-auftrittsListe.push(new Lib
-    .Auftritt(new Date('2024-01-21T20:00'),"Rote Fabrik, Zurich",
+auftrittsListe.push(new Auftritt(new Date('2024-01-21T20:00'),"Rote Fabrik, Zurich",
         "Züri West"));
-auftrittsListe.push(new Lib
-    .Auftritt(new Date('2024-02-15'),"Zentral-Wäscherei, Zurich",
+auftrittsListe.push(new Auftritt(new Date('2024-02-15'),"Zentral-Wäscherei, Zurich",
         "Rain on Mars"));
-auftrittsListe.push(new Lib
-    .Auftritt(new Date('2024-02-16'),"Zentral-Wäscherei, Zurich",
+auftrittsListe.push(new Auftritt(new Date('2024-02-16'),"Zentral-Wäscherei, Zurich",
         "Züri West"));
 
 for(let i=0;i<auftrittsListe.length;i++){
