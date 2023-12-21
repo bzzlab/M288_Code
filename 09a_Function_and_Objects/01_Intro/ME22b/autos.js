@@ -1,23 +1,37 @@
 //Lou König
 //Objekt 1
-let auto1 = {
+let autos = [{
     baujahr: '2012',
     marke: 'Ferrari',
     price: 100000
-}
-//Objekt 2
-let auto2 = {
+},{
     baujahr: '2000',
     marke: 'BMW',
     price: 90000
-}
+},{
+    baujahr: '2023',
+    marke: 'Pagani',
+    price: 3000000
+},{
+    baujahr: '2020',
+    marke: 'Audi A8',
+    price: 120000
+}]
 let getSummary = function (auto) {
     return {
-        summary: `Der \"${auto.marke}\" kostet CHF ${auto.price}`,
-        pageCount: `Der \"${auto.marke}\" wurde im Jahr ${auto.baujahr} gebaut.`
+        info: `Der \"${auto.marke}\" kostet CHF ${auto.price}`,
+        baujahr: `Der \"${auto.marke}\" wurde im Jahr ${auto.baujahr} gebaut.`
     }
 }
-let obj1 = getSummary(auto1);
-console.log(`${obj1.summary}. ${obj1.pageCount}`);
-obj1 = getSummary(auto2);
-console.log(`${obj1.summary}. ${obj1.pageCount}`);
+
+/*let i=0;
+while (i<autos.length){
+    console.log(`${getSummary(autos[i]).info}.\n${getSummary(autos[i]).baujahr}.`);
+    i++;
+}*/
+
+let find1=autos.find((auto) =>{
+    return auto.price < 100000;
+});
+
+console.log(find1);

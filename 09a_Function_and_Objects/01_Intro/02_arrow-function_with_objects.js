@@ -19,8 +19,7 @@ const personen = [{
 //filter all person with age < 30
 let age=30;
 log(`filter all person with age < ${age}?`);
-let filter1 =
-    personen.filter((person) =>
+let filter1 = personen.filter((person) =>
         person.age < 30
 );
 log(filter1);

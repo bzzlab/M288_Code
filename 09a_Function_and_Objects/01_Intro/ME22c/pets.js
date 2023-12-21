@@ -1,23 +1,24 @@
-let pet1 = {
+let pets = [{
     animal: 'rabbit',
     name: 'luna',
     color: 'white',
     favouriteFood: 'vegetable'
-}
-
-let pet2 = {
+},{
     animal: 'dog',
     name: 'rex',
-    color: 'black',
+    color: 'white',
     favouriteFood: 'meat'
-}
-
-let pet3 = {
+},{
     animal: 'cat',
     name: 'lui',
     color: 'brown',
-    favouriteFood: 'fish'
-}
+    favouriteFood: 'corn'
+},{
+    animal: 'bird',
+    name: 'dug',
+    color: 'red',
+    favouriteFood: 'corn'
+}];
 
 
 let getSummary = function (pet) {
@@ -28,11 +29,23 @@ let getSummary = function (pet) {
 }
 
 //call and result on the console
-let obj1 = getSummary(pet1);
-console.log(`${obj1.summary}. ${obj1.favouriteFood}`);
 
-let obj2 = getSummary(pet2);
-console.log(`${obj2.summary}. ${obj2.favouriteFood}`);
+/*let i=0;
+while (i<pets.length){
+    let obj1 = getSummary(pets[i]);
+    console.log(`${obj1.summary}. ${obj1.favouriteFood}`);
+    i++;
+}*/
 
-let obj3 = getSummary(pet3);
-console.log(`${obj3.summary}. ${obj3.favouriteFood}`);
+let result = pets.filter((criteria) => {
+    return criteria.color === "white"
+});
+console.log("filter:");
+console.log(result);
+
+result = pets.find((criteria) => {
+    return criteria.color === "white"
+});
+console.log("find:");
+console.log(result);
+
