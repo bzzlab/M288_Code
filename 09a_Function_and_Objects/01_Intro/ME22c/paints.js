@@ -1,23 +1,17 @@
 //Object 1
-let art1 = {
+let artList = [{
     title: 'Der Kuss',
     artist: 'Gustav Klimt',
     year: 1909
-}
-
-//Object 2
-let art2 = {
+},{
     title: 'Rosa Periode',
     artist: 'Pablo Picasso',
     year: 1906
-}
-
-//Object 3
-let art3 = {
+},{
     title: 'Impression, aufgehende Sonne',
     artist: ' Oscar-Claude Monet',
     year: 1872
-}
+}];
 
 //function that returns an object literal
 let getSummary = function (art) {
@@ -27,12 +21,13 @@ let getSummary = function (art) {
     }
 }
 
-//call and result on the console
-let obj1 = getSummary(art1);
-console.log(`${obj1.summary}. ${obj1.year}`);
+// for(let index=0;index < artList.length; index++){
+//     let obj1 = getSummary(artList[index]);
+//     console.log(`${obj1.summary}. ${obj1.year}`);
+// }
 
-obj1 = getSummary(art2);
-console.log(`${obj1.summary}. ${obj1.year}`);
+let filter1 = artList.filter((art) => {
+    return art.year < 1900;
+})
 
-obj1 = getSummary(art3);
-console.log(`${obj1.summary}. ${obj1.year}`);
+console.log(filter1)
